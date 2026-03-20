@@ -1,0 +1,228 @@
+/* Settings page */
+.settings-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f2f6fb 0%, #dce4ec 100%);
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 12px;
+  margin: 0;
+}
+
+.back-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #0093ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  max-width: 90px;
+}
+
+.settings-header-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #112233;
+  flex: 1;
+  min-width: 0;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.settings-body {
+  display: flex;
+  gap: 18px;
+  padding: 24px 30px;
+}
+
+.settings-nav {
+  width: 240px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.settings-nav-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #1f2733;
+}
+
+.settings-nav-item.active,
+.settings-nav-item:hover {
+  background: rgba(0, 123, 255, 0.13);
+}
+
+.settings-content {
+  flex: 1;
+  display: flex;
+  gap: 18px;
+}
+
+.settings-panel {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.settings-panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.settings-panel-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select {
+  /* width: 100%; */
+  padding: 8px;
+  border: 1px solid rgba(0,0,0,0.16);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.settings-panel-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.settings-panel-actions .button-primary,
+.settings-panel-actions .button-secondary {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.settings-panel-actions .button-primary { background: #007bff; color: #fff; }
+.settings-panel-actions .button-secondary { background: #f25c4a; color: #333; }
+
+.settings-table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.settings-table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.settings-table-row.header {
+  background: #f4f6fa;
+  font-weight: 700;
+}
+
+.settings-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.settings-side-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 16px;
+}
+
+.settings-side-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.settings-side-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.settings-side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.settings-side-list-item {
+  border-radius: 6px;
+  background: #f8f9ff;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.settings-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.settings-radio {
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .settings-header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .settings-header-title { font-size: 18px; margin: 0; flex: 1; }
+  .back-btn { width: auto; min-width: 100px; max-width: 140px; }
+  .settings-body { flex-direction: column; padding: 16px; }
+  .settings-nav { width: 100%; }
+  .settings-content { flex-direction: column; }
+  .settings-panel-row { grid-template-columns: 1fr 1fr; }
+}
+
+.field.checkbox {
+  flex-direction: row;       /* Align label + checkbox side by side */
+  /* align-items: left;       Vertically center them */
+  gap: 1px;                  /* Space between label and checkbox*/
+}
+
+.field.checkbox label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
