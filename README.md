@@ -1,2 +1,2 @@
 # Pharamacy-stock-movement
-Author - Basavarajgit s
+Author - Basavaraj.J  
